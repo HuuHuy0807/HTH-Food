@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web bán thức ăn </title>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+#wrapper {
+    /* Kích thước màn hình là 1280 x 720 */
+    width: 100%;
+    height: 100vh;
+}
+
+#header {
+    width: 100%;
+    padding: 0px 30px;
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+}
+
+#menu .item {
+    margin: 0px 25px;
+}
+
+#menu .item a {
+    color: #626A67;
+    text-decoration: none;
+}
+
+
+#actions {
+    display: flex;
+}
+
+#actions .item {
+    margin-left: 22px;
+}
+
+
+
+
+
+#banner {
+    width: 100%;
+    background-image: url("banner.png");
+    height: 463px;
+    margin-top: 40px;
+    display: flex;
+    padding: 0px 133px;
+    position: relative;
+}
+
+#banner .box-left,
+#banner .box-right {
+    width: 50%;
+}
+
+#banner .box-left h2 {
+    font-size: 48px;
+    margin-top: 75px;
+    color: #fff;
+}
+
+#banner .box-left p {
+    color: #D0D0D0;
+}
+
+#banner .box-left button {
+    width: 191px;
+    height: 40px;
+    margin-top: 41px;
+    background: #1d1a1a;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+#banner .box-left button:hover {
+    background: orange;
+}
+
+#banner .box-right {
+    padding-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner .box-right img {
+    margin: 0px 10px;
+    animation: animation 3s infinite linear;
+}
+
+
+#banner .box-right img:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+#banner .box-right img:nth-child(2) {
+
+    animation-delay: 1s;
+}
+
+@keyframes animation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+.to-bottom {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+#wp-products {
+    padding-top: 116px;
+    padding-bottom: 78px;
+    padding-left: 134px;
+    padding-right: 134px;
+}
+
+#wp-products h2 {
+    text-align: center;
+    margin-bottom: 76px;
+    font-size: 32px;
+    color: #626a67;
+}
+
+
+#list-products {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#list-products .item {
+    width: 290px;
+    height: 374px;
+    background: #362f2f;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#list-products .item img {
+    display: block;
+    margin: 0px auto;
+    margin-top: 17px;
+}
+
+#list-products .item .stars {
+
+    display: flex;
+    margin: 0px auto;
+    width: 50%;
+}
+
+#list-products .item .name {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 21px;
+}
+
+#list-products .item .desc {
+    text-align: center;
+    color: #626a67;
+}
+
+#list-products .item .price {
+    text-align: center;
+    color: #f42424;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+.list-page {
+    width: 50%;
+    margin: 0px auto;
+}
+
+.list-page {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-page .item {
+    margin: 0px 15px;
+    width: 37px;
+    height: 37px;
+    background: #362f2f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-page .item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+#saleoff {
+    width: 100%;
+    display: flex;
+    height: 322px;
+}
+
+#saleoff .box-left,
+#saleoff .box-right {
+    width: 50%;
+}
+
+#saleoff .box-left {
+    background: #3e413e;
+    text-align: center;
+    min-height: 322px;
+}
+
+#saleoff .box-left h1 {
+    padding-top: 38px;
+}
+
+#saleoff .box-left span:nth-child(1) {
+    color: #fff;
+    font-size: 50px;
+}
+
+#saleoff .box-left span:nth-child(2) {
+    color: orange;
+    font-size: 128px;
+}
+
+#saleoff .box-right {
+    background-image: url("off.png");
+}
+
+
+#comment {
+    width: 1012px;
+    height: 478px;
+    margin: 0px auto;
+    margin-top: 184px;
+    margin-bottom: 50px;
+}
+
+#comment h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+    color: #626a67;
+}
+
+
+#comment-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 400px;
+    list-style: none;
+    overflow: hidden;
+}
+
+#list-comment {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    transition: 0.5s;
+}
+
+#list-comment .item {
+    width: 100%;
+    height: 100%;
+    background: #362f2f;
+    border-radius: 20px;
+    padding-top: 50px;
+}
+
+#list-comment .item .avatar {
+    text-align: center;
+    margin-top: 13px;
+}
+
+#list-comment .item .stars {
+    display: flex;
+    margin: 0px auto;
+    width: 50%;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+#list-comment .item .name {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+#list-comment .item .text {
+    padding: 20px 50px;
+    color: #fff;
+
+}
+
+#footer {
+    width: 100%;
+    background: rgb(0, 0, 0, 0.79);
+    height: 322px;
+    margin-top: 338px;
+    padding: 0px 63px;
+    padding-top: 57px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .box {
+    width: 250px;
+    color: #fff;
+}
+
+#footer .box .quick-menu {
+    margin-top: 40px;
+
+}
+
+
+#footer .box .quick-menu .item {
+    margin-bottom: 12px;
+
+}
+
+#footer .box .quick-menu,
+.item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+#footer .box form input {
+    width: 294px;
+    height: 42px;
+    background: transparent;
+    padding-left: 20px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+#footer .box form button {
+    background: #362f2f;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0.25);
+    width: 163px;
+    height: 38px;
+    margin-top: 29px;
+    color: #fff;
+}
+</style>
+<style>
+    body
+    {
+        margin: 0 auto;
+    }
+    .wrap
+    {
+        margin: 0 auto;
+        width:1000px;
+        height:300px;
+        background-color:yellow;
+         
+        display: flex; /* Canh giữa bằng flex */
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    </style>
+<style>
+body {
+    -webkit-animation: colorchange 60s infinite; 
+    animation: colorchange 60s infinite;
+}
+@-webkit-keyframes colorchange {
+     0%  {background: #33FFF3;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+}
+@keyframes colorchange {
+     0%  {background: #33FFF3;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+}   
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300');
+.brand {
+  text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.brand span {
+  color: #ffffff;
+}
+
+
+.wrapper > * {
+  padding: 1em;
+}
+
+/* ------------------- */
+/* COMPANY INFORMATION */
+/* ------------------- */
+
+.company-info {
+  background: #dff7df;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.company-info h3,
+.company-info ul {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+/* ------- */
+/* CONTACT */
+/* ------- */
+
+.contact {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* ---- */
+/* FORM */
+/* ---- */
+
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact form label {
+  display: block;
+}
+
+.contact form p {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 1em;
+  border: solid 1px green;
+  border-radius: 4px;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form button {
+  background: green;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+  color: #ffffff;
+  outline: 0;
+  transition: background-color 2s ease-out;
+}
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+@media only screen and (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > * {
+    padding: 2em;
+  }
+
+  .company-info {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .contact {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .company-info h3,
+  .company-info ul,
+  .brand {
+    text-align: left;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.container{
+    width: 1140px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+        <div id="header">
+            <a href="" class="logo">
+                <img src="logo.png" alt="">
+            </a>
+            <div id="menu">
+                <div class="item">
+                    <a href="">Trang chủ</a>
+                </div>
+                <div class="item">
+                    <a href="">Sản phẩm</a>
+                </div>
+                <div class="item">
+                    <a href="https://www.viendinhduong.vn/vi/gioi-thieu-11/gioi-thieu-vien-dinh--duong.html">Blog</a>
+                </div>
+                <div class="item">
+                    <a href="lienhe.html">Liên hệ</a>
+                </div>
+                <div class="item">
+                    <a href="taiweb.html">Tải App</a>
+                </div>
+            </div>
+            <div id="actions">
+                <div class="item">
+                    <a href="/login/index.html"><img src="user.png"></a>
+                    <!--<img src="user.png" alt="">-->
+                </div>
+                <div class="item">
+                    <img src="cart.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="box-left">
+                <h2>
+                    <span>THỨC ĂN</span>
+                    <br>
+                    <span>THƯỢNG HẠNG</span>
+                </h2>
+                <p>Chuyên cung cấp các món ăn đảm bảo dinh dưỡng
+                    hợp vệ sinh đến người dùng,phục vụ người dùng 1 cái
+                    hoàn hảo nhất</p>
+                <button>Mua ngay</button>
+            </div>
+            <div class="box-right">
+                <img src="img_1.png" alt="">
+                <img src="img_2.png" alt="">
+                <img src="img_3.png" alt="">
+            </div>
+            <div class="to-bottom">
+                <a href="">
+                    <img src="to_bottom.png" alt="">
+                </a>
+            </div>
+        </div>
+
+
+        <section>
+    <br><br><br>
+    <div class="container" style="text-align:left;">
+        <br><br><br>
+
+    <div class="wrapper">
+
+        <!-- COMPANY INFORMATION -->
+        <div class="company-info">
+            <h2>Thông tin liên hệ</h2><br><br>
+            <ul>
+                <li><i class="fa fa-road"></i> Thân Cửu Nghĩa, Châu Thành, Tiền Giang</li><br><br>
+                <li><i class="fa fa-phone"></i> 0947 910 501</li><br><br>
+                <li><i class="fa fa-envelope"></i> huyplapla008@gmail.com</li><br><br>
+            </ul>
+        </div>
+        <!-- End .company-info -->
+
+        <!-- CONTACT FORM -->
+        <div class="contact">
+            <h2 style="color: rebeccapurple;">Gửi tin nhắn cho chúng tôi</h2><br>
+            <p>Nếu bạn có bất kỳ câu hỏi nào hay cần tư vấn về các loại dịch vụ có thể gửi tin nhắn cho website <b>HTH
+                    Food</b> ở đây. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.</p><br>
+
+            <form id="contact-form">
+
+                <p>
+                    <label>Tên</label>
+                    <input type="text" name="name" id="name" required>
+                </p>
+
+                <p>
+                    <label>Địa chỉ</label>
+                    <input type="text" name="diachi" id="diachi">
+                </p>
+
+                <p>
+                    <label>Email</label>
+                    <input type="email" name="email" id="email">
+                </p>
+
+                <p>
+                    <label>Số điện thoại</label>
+                    <input type="text" name="phone" id="phone" required>
+                </p>
+
+                <p class="full">
+                    <label>Nội dung</label>
+                    <textarea name="message" rows="5" id="message"></textarea>
+                </p>
+
+                <p class="full">
+                    <button type="submit" onclick="submitForm()">Gửi</button>
+                </p>
+
+            </form>
+
+            <script>
+                function submitForm() {
+                    var name = document.getElementById('name').value;
+                    var phone = document.getElementById('phone').value;
+
+                    if (name === '' || phone === '') {
+                        alert('Vui lòng nhập đầy đủ thông tin!');
+                    } else {
+                        alert('Gửi tin nhắn thành công!');
+                        document.getElementById('contact-form').reset();
+                    }
+                }
+            </script>
+        </div>
+
+    </div>
+        
+    </div>
+
+    <div class="clearfix"></div>
+<br><br><br>
+</section>
+
+        <div id="footer">
+            <div class="box">
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                </div>
+                <p>Cung cấp sản phẩm với chất lượng an toàn cho quý khách</p>
+            </div>
+            <div class="box">
+                <h3>NỘI DUNG</h3>
+                <ul class="quick-menu">
+                    <div class="item">
+                        <a href="">Trang chủ</a>
+                    </div>
+                    <div class="item">
+                        <a href="">Sản phẩm</a>
+                    </div>
+                    <div class="item">
+                        <a href="https://www.viendinhduong.vn/vi/gioi-thieu-11/gioi-thieu-vien-dinh--duong.html">Blog</a>
+                    </div>
+                    <div class="item">
+                        <a href="lienhe.html">Liên hệ</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="box">
+                <h3> THÔNG TIN LIÊN HỆ</h3>
+                <P><b>Số điện thoại</b>: 0947 910 501</P>
+                <P><b>Địa chỉ</b>: Thân Cửu Nghĩa, Châu Thành, Tiền Giang</P><br>
+                <!--<form action="">
+                    <input type="text" placeholder="Địa chỉ email">
+                    <button>Nhận tin</button>
+                </form>-->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
